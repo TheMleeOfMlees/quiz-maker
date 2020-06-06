@@ -88,6 +88,6 @@ export default {
 }
 #heading{
     padding-top:20px;
-    padding-left:20%;
+    padding-left:16%;
 }
 </style>

@@ -19,8 +19,12 @@
         @on-answer-selected="question.chosenAnswer = $event" 
         :question="question" :key="ind" :ind="ind+1"></question>
         <div class="row">
-            <button id="submit" v-if="!isSubmitted" @click="gradeQuiz">Submit</button>
-            <p v-if="showValidationError">Answer all questions before submitting. Unanswered questions are displayed in yellow.</p>
+            <button id="submit" v-if="!isSubmitted" @click="gradeQuiz">Submit</button>            
+        </div>
+        <div class="row" v-show="showValidationError">
+            <div class="col-8 text-center" style="margin:auto; margin-top:25px;">
+                <p  style="color:red;">Answer all questions before submitting. Unanswered questions are displayed in yellow.</p>
+            </div>
         </div>
         
   </div>

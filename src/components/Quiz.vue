@@ -20,6 +20,7 @@
         :question="question" :key="ind" :ind="ind+1"></question>
         <div class="row">
             <button id="submit" v-if="!isSubmitted" @click="gradeQuiz">Submit</button>
+            <p v-if="showValidationError">Answer all questions before submitting. Unanswered questions are displayed in yellow.</p>
         </div>
         
   </div>
@@ -39,7 +40,8 @@ export default {
             isSubmitted: false,
             numRight: 0,
             numQuestion: 0,
-            grade: 0
+            grade: 0,
+            showValidationError: false
         }
     },
     methods:{
@@ -49,12 +51,15 @@ export default {
         },
         gradeQuiz(){
             if(this.validateQuiz()){
+                this.showValidationError = false;
                 this.numRight = this.allQuestions.filter(x => x.chosenAnswer == x.answerIndex).length;
                 this.numQuestions = this.allQuestions.length
                 this.grade = (this.numRight / this.numQuestions) * 100;
                 this.isSubmitted = true;
                   $('html,body').animate({ scrollTop: 0 }, 'fast');
                 //alert(`You got  correct! You scored ${}%`)
+            }else{
+                this.showValidationError = true;
             }
         }
     },

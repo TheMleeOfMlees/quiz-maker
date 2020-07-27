@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div id="header">
-      Mlee's Quiz Corner
+      Quiz Application
     </div>
     <router-view/>
   </div>

@@ -16,7 +16,7 @@ export default[
             'HTML handles data, CSS handles routing',
             'HTML tells the browser what to display, CSS tell it what style to display it in',
             'HTML styles the page, CSS makes it interactive',
-            "Nothing, they're stupid"
+            "HTML makes the page interactive, CSS styles the page"
         ],
         answerIndex: 1,
         chosenAnswer: -1
@@ -84,7 +84,7 @@ export default[
         chosenAnswer: -1
     },
     {
-        question: `What is the best way to add css your elements`,
+        question: `What is the best way to add css to your elements`,
         options:[
             'Inline styles',
             'Internal style sheets',
@@ -116,14 +116,25 @@ export default[
         chosenAnswer: -1
     },
     {
-        question: `What's the best reason to learn programming?`,
+        question: `What is the difference between == and === in javascript?`,
         options:[
-            `It's really fun`,
-            'You can make a lot of money',
-            `It exercises your mind and promotes critical thinking`,
-            'All of the above'
+            '== checks if both variables have a value set, === checks if the two values are equal',
+            '== checks for the same value, === checks for the same value and same data type',
+            '== is used for numerical equality, === is used for strings and characters',
+            'They are the same'
         ],
-        answerIndex: 3,
+        answerIndex: 1,
         chosenAnswer: -1
-    }
+    },
+    // {
+    //     question: `What's the best reason to learn programming?`,
+    //     options:[
+    //         `It's really fun`,
+    //         'You can make a lot of money',
+    //         `It exercises your mind and promotes critical thinking`,
+    //         'All of the above'
+    //     ],
+    //     answerIndex: 3,
+    //     chosenAnswer: -1
+    // }
 ]
